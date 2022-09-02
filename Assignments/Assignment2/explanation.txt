@@ -1,0 +1,9 @@
+JCSS:
+Because the OR operator evaluates from left to right and the expression evaluates to True, "JCSS" is outputed because it is the first
+True term in the OR expression. firstName and lastName are both empty strings, so they evaluate to False, but nickName is a non-empty 
+string, so it is True.
+
+Anonymous:
+The AND operator looks for the first False operand, but in this case since both nickName and "Anonymous" evaluate to True, the AND
+expression also evaluates to True and returns the last operand: "Anonymous". Now all the expression that remains is all ORs, so it 
+looks for the first True operand from left to right, and in this case the last operand, "Anonymous", is the first True operand.
