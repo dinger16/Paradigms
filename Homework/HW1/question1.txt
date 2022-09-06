@@ -1,0 +1,4 @@
+Declaration using var gives the variable function level scope, but using let to declare a variable gives that variable block scope.
+In this case, the conditionals for positive and zero both give the result variable function level scope, and therefore, the string
+is able to be returned outside of the conditionals. However, the negative conditional uses block scope to assign a value to result,
+so the variable can't be returned at the end of the function because it was assigned inside the conditional.
