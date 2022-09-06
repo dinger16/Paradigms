@@ -1,0 +1,4 @@
+This first two conditions are true becase the "==" operator checks for equality, but does not require the two data types to be the same.
+For the first condition, the string "0" is type casted to a number, so it is equal to 0. For the second condtion, the empty list is 
+converted to an empty string, and when the empty string is type casted to a number it also equals 0. However, the last condition is false
+because the empty list is casted as an empty string which is not equal to "0".
