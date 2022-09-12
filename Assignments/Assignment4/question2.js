@@ -16,5 +16,4 @@ function findConsecutiveOnes(nums) {
     return max_consecutive
 }
 
-// nums = [1,1,1,1,1,10,1,1,1,1 ]
-// console.log((`${findConsecutiveOnes(nums)}`))
+module.exports = {findConsecutiveOnes}
