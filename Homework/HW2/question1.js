@@ -6,7 +6,9 @@ var users = [
 ];
 
 function findUserById(users, id){
-    return users.find(user => (user.id === id)).name || null;
+    let user = users.find(user => (user.id === id));
+    if (user != undefined) return user.name;
+    else return null;
 }
 
 function computeBMIs(users){
