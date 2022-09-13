@@ -1,6 +1,3 @@
-// import the NodeJS modules
-const { resolveObjectURL } = require('buffer');
-const { clear } = require('console');
 const fs = require('fs');               // module for file I/O
 const readline = require("readline");   // module for reading line-by-line from file
 
@@ -28,15 +25,9 @@ class Defect {
 }
 
 function loadObjects(){
-
-    /* ... Your implementation here ... */
-    // You can use the readFile from the fs module
-    // See the documentation: https://nodejs.org/en/knowledge/file-system/how-to-read-files-in-nodejs/
-    // The CSV files are comma-separated
-
     let defectsCSV = fs.readFileSync("defects.csv","utf8");    
-    let dependsCSV = fs.readFileSync("test_depends.csv","utf8");
-    let blocksCSV = fs.readFileSync("test_blocks.csv","utf8");
+    let dependsCSV = fs.readFileSync("defect_depends.csv","utf8");
+    let blocksCSV = fs.readFileSync("defect_blocks.csv","utf8");
     let developersCSV = fs.readFileSync("developers.csv","utf8");
 
     let defectsRows = []
@@ -44,16 +35,13 @@ function loadObjects(){
         defectsRows.push(row.split(','));
     });
 
-    // check delimiter
     let dependsRows = []
-    dependsCSV.split("\n").forEach(row =>{
+    dependsCSV.split("\r\n").forEach(row =>{
         dependsRows.push(row.split(','));
     });
-    console.log(dependsRows)
 
-    // check delimiter
     let blocksRows = []
-    blocksCSV.split("\n").forEach(row =>{
+    blocksCSV.split("\r\n").forEach(row =>{
         blocksRows.push(row.split(','));
     });
 
@@ -78,9 +66,6 @@ function loadObjects(){
         else obj.fixed_by_real_name = null;
         objects.push(obj)
     }
-
-    console.log(objects[3])
-
     return objects;
 }
 
@@ -151,6 +136,7 @@ function query5(defects){
 }
 
 function query6(defects){
+    // loop through defects and perform bfs for each object
     for (let i = 0; i < defects.length; i++) {
         if (bfs_target(defects, defects[i]) == true) return true;
     }
@@ -160,6 +146,7 @@ function query6(defects){
 function findByID(defects, id) {return defects.find(obj => obj.bug_id === id)}
 
 function bfs_target(graph, initialObj) {
+    // if initial object's id found again in bfs, then there is a circular dependency
     let queue = [initialObj];
     let visited = new Set();
 
@@ -179,14 +166,10 @@ function bfs_target(graph, initialObj) {
     return false;
 }
 
-
 let defects = loadObjects();
-console.log(query1(defects));
-console.log(query2(defects));
-console.log(query3(defects));
-console.log(query4(defects));
-console.log(query5(defects));
-console.log(query6(defects));
-
-
-
+query1(defects);
+query2(defects);
+query3(defects);
+query4(defects);
+query5(defects);
+query6(defects);
