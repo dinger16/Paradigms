@@ -1,0 +1,3 @@
+When code is compiled, it is translated to assembly and then to machine code. If code is transpiled, it means the code
+is translated to another high-level language and then compiled. We say that coffeescript is transpiled because it is 
+translated to JavaScript before it is compiled.

@@ -1,0 +1,3 @@
+a) The output is 10 because the free variable gets the value in f1's scope when the function is defined.
+
+b) If JavaScript had shallow binding, the output would be 6 because f3 would get the environment of f2 because f2 called f3.

@@ -1,0 +1,3 @@
+The greaterThan function is not a higher-order function because it neither accepts a function as a parameter nor
+returns a function. It simply operates on a primitive data type. The matchesCriteria function is a higher-order 
+function because it accepts a function as a parameter.
