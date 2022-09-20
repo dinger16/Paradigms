@@ -1,0 +1,5 @@
+a) I found the bug by using a test case and stepping through the loop. I noticed that the loop did not ever reach the last element in the array nums,
+and I also noticed that the condition to reset the count relied on seeing the number 0 in the array.
+
+b) To fix this code, I changed the bounds of the loop so that every element was accessed, I also adjusted the condition to reset the count so that count
+was set back to 0 whenever the element in the array was not equal to 1.
