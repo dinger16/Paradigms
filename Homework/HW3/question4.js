@@ -58,31 +58,3 @@ function correctLetters(word, correctLetters) {
     }
     return true;
 }
-
-// state = {
-//     good_letters:["S", "A", "R", "G"],
-//     bad_letters: ["H", "D", "J", "N", "L", "M", "O", "Z"],
-//     correct_letters:["S", undefined, "G", undefined, undefined]
-//  }
-
-//  state2 = {
-//     good_letters:["O","A", "J"],
-//     bad_letters: ["Q","W","E","R","T","Y","M", "K", "N"],
-//     correct_letters:[undefined, undefined, undefined, undefined, undefined]
-//   }
-
-//  state3 = {
-//     good_letters:["S","W", "E", "T"],
-//     bad_letters: ["Q","R","Y","M", "K", "N", "R"],
-//     correct_letters:["S", "W", "E", undefined, "T"]
-//   }
-
-state = {
-    good_letters:['A', 'K'],
-    bad_letters: ['B', 'C'],
-    correct_letters:['A', undefined, undefined, undefined, undefined]
- }
-  
-console.log(`${wordleHelper(state)}`)
-// console.log(`${wordleHelper(state2)}`)
-// console.log(`${wordleHelper(state3)}`)
