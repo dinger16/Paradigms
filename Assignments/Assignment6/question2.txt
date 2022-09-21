@@ -1,0 +1,17 @@
+JavaScript Code:
+    var a = 0 -> global -- Declared in the global scope
+    let c = 2 -> global -- Declared in the global scope
+    var a = 100 -> local -- Var can have global or function scope, and since this was declared in a function, it has local scope
+    b = 200 -> global -- Variables declared without a keyword take on var and are hoisted to global scope
+    var d = 300 -> local -- Var can have global or function scope, and since this was declared in a function, it has local scope
+    let e = 400 -> local -- Let has block scope, but because this is declared on first "level of indentation" it has local scope to function.
+
+CoffeeScript Code:
+    a = 0 -> global -- Declared in the global scope
+    b = 1 -> global -- Declared in the global scope
+    a = 100 -> local -- Overwrites parameter to function
+    b = 200 -> global -- Overwrites variable declared in global scope
+    d = 300 -> local -- Only declared inside function
+    e = 400 -> local -- Only declared inside function
+
+
