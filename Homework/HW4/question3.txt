@@ -1,0 +1,3 @@
+Using the "thin" arrow (->) to declare a function inside a method changes the value of "this" to the calling context where 
+the x and y attributes are not defined, so that is why print2 produces the error message. The print1 method works properly
+because the method uses the "fat" arrow (=>) to declare the function.

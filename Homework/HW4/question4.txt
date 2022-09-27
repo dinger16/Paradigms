@@ -1,0 +1,21 @@
+A comprehension is a syntactic construct for being able to create a list from an existing list or iterable object. For
+example, if I had an array of objects which represented the 10 day weather forecast and I wanted to know which days it would
+be sunny, then I could use a comprehension to easily create the new array. The coffeeScript code below will create a new array 
+called sunnyDays which wil hold arrays containing the date and day of the week for all the days that it will be sunny in 
+the forecast.
+
+forecast = [
+    {date: '09/26/3002', day: 'Monday', high: 60, low: 48, weather : 'Cloudy'},
+    {date: '09/27/3002', day: 'Tuesday', high: 55, low: 45, weather : 'Rainy'},
+    {date: '09/28/3002', day: 'Wednesday', high: 57, low: 39, weather : 'Partly Cloudy'},
+    {date: '09/29/3002', day: 'Thursdsay', high: 62, low: 41, weather : 'Sunny'},
+    {date: '09/30/3002', day: 'Friday', high: 66, low: 44, weather : 'Sunny'},
+    {date: '10/01/3002', day: 'Saturday', high: 69, low: 48, weather : 'Partly Cloudy'},
+    {date: '10/02/3002', day: 'Sunday', high: 72, low: 49, weather : 'Partly Cloudy'},
+    {date: '10/03/3002', day: 'Monday', high: 72, low: 51, weather : 'Partly Cloudy'},
+    {date: '10/04/3002', day: 'Tuesday', high: 69, low: 49, weather : 'Cloudy'},
+    {date: '10/05/3002', day: 'Wednesday', high: 66, low: 45, weather : 'Cloudy'}
+]
+
+sunnyDays = ([f.date, f.day] for f in forecast when f.weather == 'Sunny')
+
