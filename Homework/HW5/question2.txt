@@ -1,0 +1,5 @@
+It is generally a good idea to place the CSS <link> between <head></head> to avoid any latency issues as the browser parses all of the HTML elements.
+By putting the CSS in the head, the styling for the page is retrieved before the remaining elements are parsed, so the elements that appear on the 
+page are styled the way that the user intended. Along the same lines, it is good practice to put the and JS <script> tag directly before the 
+</body> tag, so that the JS code is executed after the browser has parsed all of the HTML elements in the document. If the JS <script> were placed in
+the header, the HTML elements which the script referred to would not be rendered in time for the execution of the script.

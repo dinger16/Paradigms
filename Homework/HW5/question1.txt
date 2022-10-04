@@ -1,0 +1,5 @@
+The standard <script> tag in HTML is used to embed code in an HTML document and usually allows JavaScript code to run in the browser.
+When the <script> tag is used, the script is downloaded and executed where it is stated, so the browser will parse any remaining HTML
+elements after the script has run. If the <script async> tag is used, the script is fetched and downloaded in parallel to the parsing 
+of other HTML elements, and then it is executed as soon as it is downloaded. If the <script defer> tag is used, the script is also 
+downloaded in parallel to the parsing of HTML elements, but the script is executed after the remaining HTML has been parsed.

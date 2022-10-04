@@ -1,0 +1,83 @@
+.nav-link {
+  color: black;
+}
+
+.masthead {
+    min-height: 200px;
+    max-height: 250px;
+    background-image: url('assets/mountain_bg.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-bottom: 400px;
+  }
+
+.profile-wrapper {
+  padding-top: 140px;
+  padding-bottom: 90px;
+}
+
+.my-title {
+  padding: 20px;
+}
+
+.my-photo {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+#Mountains {
+  flex: center;
+  border-style: solid;
+}
+
+#Desert {
+  flex: center;
+  border-style: solid;
+}
+
+#City {
+  flex: center;
+  border-style: solid;
+}
+
+h1 {
+  font-family: "Courier New";
+  font-style: bold;
+}
+
+h3 {
+  font-family: "Courier New";
+  font-style: bold;
+  text-align: center;
+}
+
+p {
+  font-family: "Courier New";
+  font-style: normal;
+}
+
+.nav-link {
+  font-family: "Courier New";
+}
+
+.profile-photo {
+  max-width: 280px;
+}
+
+.image-content {
+  flex: center;
+}
+
+.writing-content {
+  flex: center;
+  margin-top: 0;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.tab {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
