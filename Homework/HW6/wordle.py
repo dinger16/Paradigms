@@ -76,7 +76,7 @@ while tries < 6:
     continue
 
 if win:
-    print("Congratulations, you win!")
+    print("Congratulations, you win after {} attempts!".format(tries+1))
 else:
     print("You ran out of guess. Better luck next time!")
     print("The correct answer was: {}".format(answer))
