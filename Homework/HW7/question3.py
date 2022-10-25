@@ -40,6 +40,8 @@ class Robot:
             self.canvas.coords(self.robot, self.width/2, self.height/2)
             self.cur_dir = 0
             self.step = 10
+            coords = self.canvas.coords(self.robot)
+            print(coords)
 
 if __name__ == '__main__':
     root = tk.Tk()
